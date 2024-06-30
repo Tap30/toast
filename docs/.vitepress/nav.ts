@@ -6,13 +6,10 @@ export default [
     link: '/getting-started',
   },
   {
-    text: 'Components',
-    link: '/components/tap-avatar',
-  },
-  {
     text: 'Related Links',
     items: [
-      {text: 'Icon Library', link: 'https://tap30.github.io/icons', target: '_blank'},
+      { text: 'Design System', link: 'https://tap30.github.io/web-components', target: '_blank' },
+      { text: 'Icon Library', link: 'https://tap30.github.io/icons', target: '_blank'},
     ],
   }
 ] as DefaultTheme.NavItem[]

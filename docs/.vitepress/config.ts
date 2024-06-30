@@ -5,9 +5,9 @@ import nav from "./nav";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Tapsi components',
-  description: 'A set of components based on Tapsi design system.',
-  base: "/web-components/",
+  title: 'Tapsi Toast',
+  description: 'Queue and display toast notifications with ease',
+  base: "/toast/",
   vite:{},
   themeConfig: {
     sidebar,

@@ -68,11 +68,7 @@ toastQueue.enqueue("${message}", {
   <tap-button
     variant="brand"
     @click=${() =>
-      toastQueue.enqueue(message, {
-        variant,
-        showDismissButton,
-        timeout,
-      })}
+      toastQueue.enqueue(message)}
   >
     Show Snackbar
   </tap-button>
