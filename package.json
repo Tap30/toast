@@ -1,13 +1,15 @@
 {
   "name": "@tapsioss/toast",
-  "version": "0.0.0-alpha-0",
+  "version": "0.0.0-alpha-2",
   "description": "A queue system for managing and displaying toast notifications.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "publish": "pnpm build && pnpm deploy",
     "build": "rm -rf dist && tsc",
     "storybook": "storybook dev -p 3001",
     "test": "wtr --watch",

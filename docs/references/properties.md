@@ -2,12 +2,6 @@
 outline: 'deep'
 ---
 
-<script>
-import '@tapsioss/web-components/dist/styles/theme.css';
-import '@tapsioss/web-components/dist/styles/font.css';
-import '@tapsioss/web-components/dist/toast';
-</script>
-
 # Properties
 
 After calling the `enqueue` method, a [`tap-toast`](https://tap30.github.io/web-components/components/tap-toast.html) component will be added to the DOM. This method has two parameters:
