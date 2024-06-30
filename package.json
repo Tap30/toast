@@ -11,7 +11,6 @@
   "scripts": {
     "publish": "pnpm build && pnpm deploy",
     "build": "rm -rf dist && tsc && pnpm analyze && cp -r ./tokens ./dist && cp -r ./styles ./dist",
-    "dev": "tsc --watch --preserveWatchOutput & wds",
     "storybook": "storybook dev -p 3001",
     "test": "wtr --watch",
     "lint": "pnpm eslint ./src/**/* --fix",

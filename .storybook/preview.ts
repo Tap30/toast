@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/web-components";
 
-// import "../styles/font.css";
-// import "../styles/theme.css";
+import '@tapsioss/web-components/dist/styles/theme.css';
+import '@tapsioss/web-components/dist/styles/font.css';
 import theme from './theme';
 // @ts-ignore
 import DocTemplate from "./DocTemplate.mdx"

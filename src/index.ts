@@ -1,3 +1,3 @@
-import { toastQueue } from './ToastManager';
+import { toastQueue } from './ToastQueue';
 
 export default toastQueue;

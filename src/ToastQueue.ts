@@ -55,7 +55,7 @@ class ToastQueue {
     if (!item) return;
 
     const { message, options } = item;
-    const { variant, showDismissButton, timout } = options;
+    const { variant, showDismissButton, timeout } = options;
 
     this.activeToasts++;
 
@@ -73,8 +73,8 @@ class ToastQueue {
     toastContainer.appendChild(toast);
 
     setTimeout(() => {
-      this.handleDismiss(toastContainer);
-    }, timout || 3000);
+      this.handleDismiss(toast);
+    }, timeout || 3000);
   }
 
   private handleDismiss(toast: HTMLElement) {
