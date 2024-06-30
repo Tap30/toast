@@ -16,6 +16,15 @@ class ToastQueue {
     this.activeToasts = 0;
   }
 
+  /**
+   * Adds a new toast message to the queue.
+   *
+   * @param {string} message - The message to be displayed in the toast.
+   * @param {ToastOptions} [options] - Optional settings for the toast.
+   * @param {string} [options.variant] - The variant of the toast, can be 'success', 'error', 'info', 'warning', or 'inverse'.
+   * @param {boolean} [options.showDismissButton] - Whether to show the dismiss button on the toast.
+   * @param {number} [options.timeout] - The duration in milliseconds the toast should be displayed before automatically dismissing.
+   */
   public enqueue(message: string, options: ToastOptions = {}) {
     this.queue.push({ message, options });
     this.processQueue();
@@ -78,7 +87,9 @@ class ToastQueue {
   }
 
   private handleDismiss(toast: HTMLElement) {
-    toast.remove();
+    if (toast.parentNode) {
+      toast.parentNode.removeChild(toast);
+    }
     this.activeToasts--;
     this.processQueue();
   }

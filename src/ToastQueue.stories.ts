@@ -5,7 +5,7 @@ import toastQueue from './index';
 import { ToastOptions } from './types';
 
 export default {
-  title: 'Toast',
+  title: 'Toast Queue',
   component: 'tap-toast',
   argTypes: {
     message: {
@@ -66,6 +66,7 @@ toastQueue.enqueue("${message}", {
     </pre
   >
   <tap-button
+    variant="brand"
     @click=${() =>
       toastQueue.enqueue(message, {
         variant,

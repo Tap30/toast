@@ -2,7 +2,7 @@ import { create } from '@storybook/theming/create';
 
 export default create({
   base: 'dark',
-  brandTitle: 'Tapsi Web Components',
+  brandTitle: 'Tapsi Toast',
   brandUrl: 'https://tap30.github.io/web-components',
   brandTarget: '_blank',
   colorPrimary: '#ff5722',
