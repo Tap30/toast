@@ -61,7 +61,7 @@ After calling these methods, the following elements will be added to the DOM:
 ### `timeout`
 
 - **Type**: `number`
-- **Description**: The duration in milliseconds the toast should be displayed before automatically dismissing.
+- **Description**: The duration in milliseconds the toast should be displayed before automatically dismissing. Default value: `3000`
 - **Usage**: Pass the `timeout` value in the options object when calling the `enqueue` method.
 
 ```typescript

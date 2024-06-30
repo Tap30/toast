@@ -1,22 +1,20 @@
 {
   "name": "@tapsioss/toast",
   "version": "0.0.0-alpha-0",
-  "files": [
-    "dist/**/*.js",
-    "dist/**/*.js.map",
-    "dist/**/*.d.ts",
-    "dist/**/*.css"
-  ],
+  "description": "A queue system for managing and displaying toast notifications.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "publish": "pnpm build && pnpm deploy",
-    "build": "rm -rf dist && tsc && pnpm analyze && cp -r ./tokens ./dist && cp -r ./styles ./dist",
+    "build": "rm -rf dist && tsc",
     "storybook": "storybook dev -p 3001",
     "test": "wtr --watch",
     "lint": "pnpm eslint ./src/**/* --fix",
     "fmt": "pnpm prettier src/**/* --write --fix",
-    "docs:dev": "cp ./dist/custom-elements.json ./docs/components/custom-elements.json && vitepress dev docs",
-    "docs:build": "vitepress build docs && cp ./dist/custom-elements.json ./docs/.vitepress/dist/components/custom-elements.json",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
@@ -39,7 +37,6 @@
     "@web/dev-server": "^0.4.2",
     "@web/dev-server-esbuild": "^1.0.2",
     "@web/test-runner": "^0.18.0",
-    "custom-elements-manifest": "^2.1.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-lit": "^1.11.0",
@@ -59,5 +56,21 @@
     "@tapsioss/web-components": "0.0.0-alpha-2",
     "lit": "^3.1.2",
     "tslib": "^2.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tap30/toast.git"
+  },
+  "homepage": "https://tap30.github.io/toast",
+  "bugs": {
+    "url": "https://github.com/Tap30/toast/issues"
+  },
+  "keywords": [
+    "toast",
+    "notifications",
+    "web components",
+    "lit",
+    "queue",
+    "frontend"
+  ]
 }

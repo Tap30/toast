@@ -13,7 +13,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: API Reference
-      link: /api
+      link: /references/properties
     - theme: alt
       text: Github
       link: https://github.com/Tap30/toast

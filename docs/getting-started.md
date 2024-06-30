@@ -35,7 +35,7 @@ Please note that [lit](https://www.npmjs.com/package/lit) is a peer dependency, 
 First, ensure you import the `toastQueue` in your code:
 
 ```typescript
-import toastQueue from '@tapsioss/toast';
+import { toastQueue } from '@tapsioss/toast';
 ```
 
 ### Enqueuing Toasts

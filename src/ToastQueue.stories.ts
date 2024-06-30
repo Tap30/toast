@@ -1,8 +1,10 @@
 import { html, TemplateResult } from 'lit';
 import '@tapsioss/web-components/dist/button';
 import '@tapsioss/web-components/dist/styles/theme.css';
-import toastQueue from './index';
+import ToastQueue, { toastQueue } from './index';
 import { ToastOptions } from './types';
+
+const customizedToastQueue = new ToastQueue(10);
 
 export default {
   title: 'Toast Queue',
@@ -51,7 +53,8 @@ const renderStoryBase = ({
   message,
   showDismissButton,
   timeout,
-}: Args) => html`
+  isCustomized,
+}: Args & { isCustomized?: boolean }) => html`
   <p>
     You can define your toast from <b>Controls</b> section and click on
     <b>Show Snackbar</b> button to see it. After clicking on this button, the
@@ -68,7 +71,11 @@ toastQueue.enqueue("${message}", {
   <tap-button
     variant="brand"
     @click=${() =>
-      toastQueue.enqueue(message)}
+      (isCustomized ? customizedToastQueue : toastQueue).enqueue(message, {
+        variant,
+        showDismissButton,
+        timeout,
+      })}
   >
     Show Snackbar
   </tap-button>
@@ -87,8 +94,27 @@ const Template: Story<Args> = ({
     timeout,
   });
 };
-export const ShowSnackbarOnClick = Template.bind({});
-ShowSnackbarOnClick.args = {
+export const sample = Template.bind({});
+sample.args = {
+  ...defaultProps,
+};
+
+const CustomMaxToastTemplate: Story<Args> = ({
+  variant,
+  message,
+  showDismissButton,
+  timeout,
+}) => {
+  return renderStoryBase({
+    variant,
+    message,
+    showDismissButton,
+    timeout,
+    isCustomized: true,
+  });
+};
+export const customMaxConcurrentToasts = CustomMaxToastTemplate.bind({});
+customMaxConcurrentToasts.args = {
   ...defaultProps,
 };
 

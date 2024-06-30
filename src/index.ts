@@ -1,3 +1,4 @@
-import { toastQueue } from './ToastQueue';
+import ToastQueue, { toastQueue } from './ToastQueue';
 
-export default toastQueue;
+export default ToastQueue;
+export { toastQueue };

@@ -2,7 +2,7 @@ import '@tapsioss/web-components/dist/toast';
 import '@tapsioss/web-components/dist/styles/theme.css';
 import { ToastOptions } from './types';
 
-class ToastQueue {
+export default class ToastQueue {
   private queue: {
     message: string;
     options: ToastOptions;
